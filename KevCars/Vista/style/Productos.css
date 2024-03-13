@@ -1,0 +1,384 @@
+/* Google Font Import - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --sidebar-color: #FFF;
+    --primary-color: #695CFE;
+    --primary-color-light: #F6F5FF;
+    --toggle-color: #DDD;
+    --text-color: #707070;
+
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.3s ease;
+}
+
+body {
+    min-height: 100vh;
+    background-color: white;
+    transition: var(--tran-05);
+    overflow: hidden;
+}
+
+::selection {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 210px;
+    padding: 10px 14px;
+    background: var(--sidebar-color);
+    transition: var(--tran-05);
+    z-index: 100;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: var(--tran-05);
+    transform: translateX(-100%);
+}
+
+.sidebar li {
+    height: 50px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.sidebar header .image,
+.sidebar .icon {
+    min-width: 60px;
+    border-radius: 6px;
+}
+
+.sidebar .icon {
+    min-width: 60px;
+    border-radius: 6px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.sidebar .text,
+.sidebar .icon {
+    color: var(--text-color);
+    transition: var(--tran-03);
+}
+
+.sidebar .text {
+    font-size: 20px;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 1;
+}
+
+
+.sidebar header {
+    position: relative;
+}
+
+.sidebar header .image-text {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar header .logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+header .image-text .name {
+    margin-top: 2px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+header .image-text .profession {
+    font-size: 16px;
+    margin-top: -2px;
+    display: block;
+}
+
+.sidebar header .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar header .image img {
+    width: 40px;
+    border-radius: 6px;
+}
+
+
+.sidebar .menu {
+    margin-top: 40px;
+}
+
+
+.sidebar li a {
+    list-style: none;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 240px;;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: var(--tran-03);
+    position: relative;
+}
+
+.sidebar li a:hover {
+    background-color: var(--primary-color);
+    width: calc(100% + 16px);
+    border-radius: 25px;
+}
+
+.home {
+    position: absolute;
+    top: 0;
+    top: 0;
+    left: 250px;
+    height: 100vh;
+    width: calc(100% - 250px);
+    background-color: var(--body-color);
+    transition: var(--tran-05);
+}
+
+.home .text {
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--text-color);
+    padding: 12px 60px;
+}
+
+.sidebar.close ~ .home {
+    left: 78px;
+    height: 100vh;
+    width: calc(100% - 78px);
+}
+
+
+.sidebar li a:hover .icon {
+    color: white; /* Cambiar el color a blanco */
+}
+.sidebar li a:hover {
+    font-weight: bold;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+  }
+  
+  .no-hover {
+    background-color: var(--primary-color);
+    width: calc(100% + 16px);
+    border-radius: 25px;
+    color: white;
+    font-weight: bold;
+    width: auto;
+    pointer-events: none;
+    cursor: default;
+  }
+
+
+
+  .sidebar li a {
+    text-decoration: none; /* Desactiva el subrayado */
+    color: var(--text-color); /* Establece el color del texto a tu preferencia */
+}  
+
+#myTable {
+  border-spacing: 2px;
+  border-color: gray;
+  background-color: white;
+  border-bottom: none;
+}
+
+#myTable td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 2px solid #f8f9fa;
+}
+
+#myTable th {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 2px solid #f8f9fa;
+}
+
+#myTable tr:not(:last-child) td {
+  margin-bottom: 40px;
+  /* Espacio entre las celdas */
+}
+
+#myTable_wrapper .dataTables_paginate .paginate_button {
+  margin-top: 5px;
+  border-radius: 50% !important;
+  background-color: white !important;
+  color: grey !important;
+  border-color: grey !important;
+  width: 30px !important;
+  height: 30px !important;
+  line-height: 30px !important;
+  font-size: 14px !important;
+  padding: 0 !important;
+}
+
+#myTable_wrapper .dataTables_paginate .paginate_button.previous,
+#myTable_wrapper .dataTables_paginate .paginate_button.next {
+  border-radius: 20px !important;
+  background-color: white !important;
+  color: grey !important;
+  border-color: #dcdcdc !important;
+  width: 80px !important;
+  height: 30px !important;
+  line-height: 30px !important;
+  font-size: 14px !important;
+  padding: 0 !important;
+}
+
+#myTable_wrapper .dataTables_paginate .paginate_button:hover {
+  background-color: #6b5cff !important;
+  color: white !important;
+}
+
+#myTable_wrapper .dataTables_paginate .paginate_button.current {
+  background-color: #6b5cff !important;
+  color: white !important;
+  border-color: #6b5cff !important;
+}
+
+#myTable_wrapper .dataTables_paginate .paginate_button:hover {
+  background-color: #6b5cff !important;
+  color: white !important;
+}
+
+#myTable_wrapper .dataTables_paginate .paginate_button:hover:not(.current) {
+  background-color: #dcdcdc !important;
+  color: #6b5cff !important;
+  border-color: #dcdcdc !important;
+}
+
+#myTable_wrapper .dataTables_paginate .paginate_button.previous:hover:not(.current):not(.disabled) {
+  background-color: #dcdcdc !important;
+  color: #6b5cff !important;
+  border-color: #dcdcdc !important;
+}
+
+#myTable_wrapper .dataTables_paginate .paginate_button.next:hover:not(.current):not(.disabled) {
+  background-color: #dcdcdc !important;
+  color: #6b5cff !important;
+  border-color: #dcdcdc !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+  background: none;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:active {
+  background: none;
+}
+
+.btn-editar {
+  color: #6b5cff;
+}
+
+.btn-eliminar {
+  color: #6b5cff;
+}
+
+.btn-editar:hover {
+  color: orange;
+}
+
+.btn-eliminar:hover {
+  color: orange;
+}
+
+.dataTables_info {
+  display: none;
+}
+
+.dataTables_length {
+  display: none;
+}
+
+
+
+.card {
+   box-shadow: 0 0 10px rgba(0.4, 0.4, 0.4, 0.4)
+}
+
+        .logo-text {
+            margin-top: 2px;
+            margin-left: -10px; /* Adjust margin as needed */
+            color: black;
+        }
+        
+        
+                .sidebar-toggle-btn {
+            display: none;
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            z-index: 101;
+        }
+
+        @media (max-width: 992px) {
+            .sidebar-toggle-btn {
+                display: block;
+            }
+
+            .sidebar.show {
+                transform: translateX(0);
+            }
+        }
+                @media (min-width: 993px) {
+            .sidebar {
+                transform: translateX(0);
+            }
+        }
+                .sidebar.show {
+            transform: translateX(0);
+        }
+        
+        
+        .logout-icon {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-top: 600px;
+    margin-bottom: 10px;
+}
+
+
+.logout-icon .icon {
+    font-size: 40px;
+    transition: margin-top 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .logout-icon .icon {
+        font-size: 20px;
+        margin-top: 10px; 
+    }
+}
